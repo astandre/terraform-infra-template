@@ -1,0 +1,26 @@
+{
+  "name": "lambda-template",
+  "version": "1.0.0",
+  "description": "Lambda template",
+  "main": "dist/index.ts",
+  "scripts": {
+    "test": "npm run compile && node dist/test.js",
+    "lint": "eslint . --ext .ts",
+    "compile": "npm run lint && tsc",
+    "jest": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ts-node": "^10.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.19",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.31.0",
+    "typescript": "^4.5.4"
+  }
+}

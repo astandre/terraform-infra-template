@@ -1,0 +1,26 @@
+# Do not change version. This is the version of aws buildspec, not the version of your buildspec file.
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Navigating
+      - pwd
+      - cd lambdas/lambdaTemplateTs
+      - echo Installing source NPM dependencies...
+      - npm ci
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run compile
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - cd dist && mkdir node_modules && cd ..
+      - mv node_modules dist
+# Include only the files required for your application to run.
+artifacts:
+  name: lambdaTemplateTs.zip
+  base-directory: lambdas/lambdaTemplateTs/dist
+  files:
+    - "**/*"

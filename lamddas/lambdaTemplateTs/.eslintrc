@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "ignorePatterns": [
+    ".eslintrc",
+    "./dist"
+  ],
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "ordered-imports": 0,
+    "member-ordering": 0,
+    "interface-name": 0,
+    "arrow-parens": 0,
+    "object-literal-sort-keys": 0,
+    "no-trailing-spaces": 2,
+    "no-return-await": 2,
+    "no-shadowed-variable": 0,
+    "no-unsafe-finally": 2,
+    "no-var-requires": 0
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ]
+}
