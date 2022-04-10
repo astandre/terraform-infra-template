@@ -1,6 +1,6 @@
 # Infra Terraform template
 
-#Configure
+# Configure
 
 * Configure your terraform environment creating a bucket to store the remote state of the infra
 * Create a terraform.tfvars with the variable github_token to build the lambdas
